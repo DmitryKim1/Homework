@@ -22,7 +22,8 @@ def cifr_bukv(stroka):
     return f"Цифр {count_cifr}, Букв {count_bukv}"
 
 def odinnakovaya_stroka(stroka):
-    if stroka == stroka.lower():
+    stroka1 = input("Введите строку: ")
+    if stroka == stroka1.lower():
         return True
     return False
 

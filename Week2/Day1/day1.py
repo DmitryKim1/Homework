@@ -1,5 +1,8 @@
 def create_list():
-    n = int(input("Введите количество элементов в массиве: "))
+    while True:
+        n = int(input("Введите количество элементов в массиве: "))
+        if n > 0:
+            break
     massive = []
 
     for i in range(n):
@@ -9,10 +12,16 @@ def create_list():
     return massive
 
 def sum_znach(massive):
-    return sum(massive)
+    if len(massive) > 0:
+        return sum(massive)
+    else:
+        return "У массива нет суммы"
 
 def min_znach(massive):
-    return min(massive)
+    if len(massive) > 0:
+        return min(massive)
+    else:
+        return "У массива нет наименьшего значения"
 
 def max_index(massive):
     return massive.index(max(massive))

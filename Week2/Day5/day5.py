@@ -1,5 +1,8 @@
 def sozdat_stroku():
-    stroka = input("Введите строку: ")
+    while True:
+        stroka = input("Введите строку: ")
+        if len(stroka) > 0:
+            break
     return stroka
 
 def normalizaciya(stroka):
@@ -41,10 +44,18 @@ def slov_dlinnee_poroga(massive):
             count += 1
     return count
 
+def srednya_dlina_slova(massive):
+    summa = 0
+    for i in massive:
+        summa += len(i)
+
+    average = summa/len(massive)
+    return average
+
 def main():
     stroka = sozdat_stroku()
     stroka1 = normalizaciya(stroka)
-    massive = razbienie(stroka)
+    massive = razbienie(stroka1)
     
     print("Строка ", stroka)
     print("Строка нормализованная ", stroka1)
@@ -53,5 +64,6 @@ def main():
     print("Максимальная длина строки", max_dlina_stroki(massive))
     print("Сколько раз слово встречается в массиве ", number_word(massive))
     print("Слов длиннее порога", slov_dlinnee_poroga(massive))
+    print("Средняя длина слова", srednya_dlina_slova(massive))
 
 main()

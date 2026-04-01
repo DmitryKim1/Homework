@@ -1,9 +1,12 @@
 def create_list():
-    n = int(input("Введите количество значений в массиве: "))
+    while True:
+        n = int(input("Введите количество элементов в массиве: "))
+        if n > 0:
+            break
     massive = []
 
     for i in range(n):
-        znachenie = int(input("Введите значение "))
+        znachenie = int(input("Введите значение элемента: "))
         massive.append(znachenie)
 
     return massive
@@ -42,7 +45,10 @@ def kolvo_vhojdenii(massive):
         return "Такого числа нет в массиве"
 
 def index_max(massive):
-    return massive.index(max(massive))
+    if len(massive) > 0:
+        return massive.index(max(massive))
+    else:
+        return "У массива нет индекса наибольшего значения"
 
 def sum_even_not_even_numbers(massive):
     sum_even = sum(massive[0::2])

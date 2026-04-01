@@ -1,5 +1,8 @@
 def stroka_def():
-    stroka = input("Введите строку: ")
+    while True:
+        stroka = input("Введите строку: ")
+        if len(stroka) > 0:
+            break
     return stroka
 
 def dlina_stroki(stroka):
@@ -28,7 +31,7 @@ def iniciali_def(stroka):
         iniciali += i[0]
         iniciali += " "
 
-    iniciali.rstrip()
+    iniciali = iniciali.rstrip()
 
     return iniciali
 
@@ -41,13 +44,15 @@ def palindrom_def(stroka):
     return False
     
 def max_dlina_stroki(stroka):
+    sam_dlin_slovo = {}
     massive_strok = stroka.split()
     samoe_dlinnaya_dlina_stroki = 0
     for i in massive_strok:
         tekuschaya_dlina_stroki = len(i)
         if tekuschaya_dlina_stroki > samoe_dlinnaya_dlina_stroki:
             samoe_dlinnaya_dlina_stroki = tekuschaya_dlina_stroki
-    return samoe_dlinnaya_dlina_stroki
+            sam_dlin_slovo[0] = i
+    return sam_dlin_slovo[0]
 
 def main():
 
