@@ -23,7 +23,7 @@ def cifr_bukv(stroka):
 
 def odinnakovaya_stroka(stroka):
     stroka1 = input("Введите строку: ")
-    if stroka == stroka1.lower():
+    if stroka.lower() == stroka1.lower():
         return True
     return False
 
