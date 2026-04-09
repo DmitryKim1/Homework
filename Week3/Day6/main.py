@@ -66,7 +66,7 @@ def main():
                 if result is True:
                     save_tasks(tasks)
                     print("Задача отмечена как done")
-                elif result == "already done":
+                elif result == "already_done":
                     print("Задача уже была выполнена")
                 else:
                     print("Задача не найдена")

@@ -6,7 +6,7 @@ def chastota():
         if char in freq:
             freq[char] += 1
         else:
-            freq[char] = 0
+            freq[char] = 1
         
     return freq
 

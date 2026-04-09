@@ -8,7 +8,7 @@ from services import (
 
 def test_get_next_id():
     assert get_next_id([]) == 1
-    assert get_next_id([{"id":1}, {"id":2}])
+    assert get_next_id([{"id":1}, {"id":2}]) == 3
 
 def test_add_task():
     tasks = []

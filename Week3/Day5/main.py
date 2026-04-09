@@ -1,6 +1,6 @@
-from storage import load_tasks, save_tasks
-from Day6.services import add_task
-from validators import validate_title, validate_priority
+from day5_storage import load_tasks, save_tasks
+from day5_services import add_task
+from day5_validators import validate_title, validate_priority
 
 def main():
     tasks = load_tasks()
@@ -16,3 +16,6 @@ def main():
         print("Задача добавлена")
     except ValueError as e:
         print("Ошибка: ", e)
+
+if __name__ == "__main__":
+    main()
