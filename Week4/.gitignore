@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Виртуальные окружения (если появятся)
+venv/
+.env/
+
+# (опционально) если не хочешь хранить данные
+# books.json
