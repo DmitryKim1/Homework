@@ -11,7 +11,7 @@ class LibraryService:
         self.books: list[Book] = []
 
     def add_book(self, book: Book) -> None:
-        self.books.append(Book)
+        self.books.append(book)
 
     def get_all_books(self) -> list[Book]:
         return self.books

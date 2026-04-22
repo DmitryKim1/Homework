@@ -22,7 +22,7 @@ class LibraryService:
     
     def find_by_id(self, book_id: int) -> Book:
         for book in self.books:
-            if book.id == book.id:
+            if book.id == book_id:
                 return book
             raise ValueError("Книга не найдена")
         

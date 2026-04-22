@@ -19,7 +19,7 @@
 * `models.py` — модель книги (Book)
 * `services.py` — логика работы с книгами
 * `storage.py` — загрузка и сохранение JSON
-* `tests/` — тесты
+* `tests.py` — тесты
 
 ## Запуск
 
@@ -32,7 +32,7 @@ python3 main.py
 ## Тесты
 
 ```bash
-python3 -m unittest tests/test_services.py
+python3 -m unittest tests.py
 ```
 
 ## Хранение данных
@@ -52,4 +52,4 @@ python3 -m unittest tests/test_services.py
   }
 ]
 ```
-![Screnshot](screenshots/image.png)
+![Screenshot](screnshots/image.png)
