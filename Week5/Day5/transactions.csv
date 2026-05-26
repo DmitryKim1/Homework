@@ -1,0 +1,5 @@
+id,type,amount,category,date,comment
+1,expense,1200,food,2026-04-20,products
+2,income,50000,salary,2026-04-21,salary
+3,expense,300,transport,2026-04-21,bus
+4,expense,1500,food,2026-04-22,cafe

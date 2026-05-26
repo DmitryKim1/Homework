@@ -1,0 +1,9 @@
+type,amount,category,date,comment
+expense,1200,food,2026-04-20,products
+income,50000,salary,2026-04-21,april salary
+expense,300,transport,2026-04-21,bus
+expense,abc,food,2026-04-22,bad amount
+bad,line
+expense,1500,food,2026-04-22,cafe
+income,7000,freelance,2026-04-23,small task
+expense,4500,education,2026-04-24,course
