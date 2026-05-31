@@ -1,3 +1,4 @@
+from pathlib import Path
 from storage import (
     read_transactions_csv,
     iter_transactions_csv,
@@ -10,8 +11,9 @@ from storage import (
 )
 
 def main():
-    csv_file = "data/transactions.csv"
-    json_file = "output/transactions.json"
+    BASE_DIR = Path(__file__).resolve().parent
+    csv_file = BASE_DIR / "transactions.csv"
+    json_file = BASE_DIR / "report.json"
     report_file = "output/category_report.json"
     export_csv_file = "output/export.csv"
 

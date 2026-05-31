@@ -1,5 +1,6 @@
 import argparse
 import logging
+from pathlib import Path
 
 from storage import load_transactions, save_transactions, export_json
 from services import (
@@ -11,7 +12,9 @@ from services import (
     build_report,
 )
 
-DATA_FILE = "transactions.csv"
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_FILE = BASE_DIR / "transactions.csv"
 
 def print_transaction(transaction):
     print(
@@ -134,3 +137,18 @@ def build_parser():
     export_parser.set_defaults(func=handle_export)
 
     return parser
+
+def main():
+    logging.basicConfig(
+        filename=BASE_DIR / "app.log",
+        level=logging.INFO,
+        format="%(asctime)s - %(levelname)s - %(message)s",
+    )
+
+    parser = build_parser()
+    args = parser.parse_args()
+    args.func(args)
+
+
+if __name__ == "__main__":
+    main()

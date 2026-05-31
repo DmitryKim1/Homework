@@ -3,3 +3,4 @@ id,type,amount,category,date,comment
 2,income,50000,salary,2026-04-21,salary
 3,expense,300,transport,2026-04-21,bus
 4,expense,1500,food,2026-04-22,cafe
+5,expense,100,food,2026-05-04,lunch

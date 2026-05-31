@@ -1,8 +1,8 @@
 import unittest
 
-from services import filter_by_category, filter_by_type, add_record
-from validators import validate_amount, validate_type
-from report import total_by_type, balance
+from Day6.services import filter_by_category, filter_by_type, add_record
+from Day6.validators import validate_amount, validate_type
+from Day6.report import total_by_type, balance
 
 class TestDay6(unittest.TestCase):
 
@@ -74,6 +74,22 @@ class TestDay6(unittest.TestCase):
     def test_validate_amount_error(self):
         with self.assertRaises(ValueError):
             validate_amount(-100)
+
+    def test_add_record_empty_list(self):
+        records = []
+
+        result = add_record(
+            records,
+            "expense",
+            100,
+            "food",
+            "2026-05-04",
+            "lunch"
+        )
+
+        self.assertEqual(len(records), 1)
+        self.assertEqual(result["id"], 1)
+        self.assertEqual(result["type"], "expense")
     
 if __name__ == "__main__":
     unittest.main()

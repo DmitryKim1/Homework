@@ -7,11 +7,13 @@ def total_by_type(records, record_type):
 
     return total
 
+
 def balance(records):
     income = total_by_type(records, "income")
     expense = total_by_type(records, "expense")
 
     return income - expense
+
 
 def category_stats(records):
     stats = {}

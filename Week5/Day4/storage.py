@@ -33,7 +33,7 @@ def parse_transaction(row):
 def read_transactions_csv(filename):
     transactions = []
 
-    with open(filename, "r", encodingg = "utf-8", newline="") as file:
+    with open(filename, "r", encoding = "utf-8", newline="") as file:
         reader = csv.DictReader(file)
 
         for row in reader:

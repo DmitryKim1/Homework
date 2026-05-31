@@ -1,8 +1,8 @@
 import argparse
 
-from storage import load_records, save_records
-from services import add_record, filter_by_category, filter_by_type
-from report import total_by_type, balance, category_stats
+from Day7.storage import load_records, save_records
+from Day7.services import add_record, filter_by_category, filter_by_type
+from Day7.report import total_by_type, balance, category_stats
 
 
 def show_records(records):
